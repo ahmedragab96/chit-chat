@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
   titleText: {
     fontSize: 24,
     marginBottom: 10,
+    color: 'black',
   },
   loginButtonLabel: {
     fontSize: 22,
