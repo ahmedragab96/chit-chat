@@ -1,7 +1,15 @@
 import React, { createContext, useState } from 'react';
 import auth from '@react-native-firebase/auth';
 
-export const AuthContext = createContext({});
+type AuthContextProps = {
+  user: any;
+  setUser: React.Dispatch<React.SetStateAction<null>>;
+  register: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+};
+
+export const AuthContext = createContext<Partial<AuthContextProps>>({});
 
 export interface Props {
   children: React.ReactNode;
